@@ -1,9 +1,12 @@
 //Creating variables for starting the game and the timer
 var startButton = document.getElementById("start");
 var timerElement = document.getElementById("time");
+var div = document.createElement("question.title");
 
 var timeLeft = 60;
 var questionNumber = 0
+
+startButton.addEventListener("click", startGame);
 
 function startGame() {
 
@@ -33,32 +36,40 @@ function startGame() {
         }
     }, 1000);
 
-    /*function displayQuestion() {
+    function displayQuestion() {
 
-        var question = questions[questionNumber];
-    }
+        var question = questions[questionNumber]; {
 
-    function onSelectAnswer(event) {
-if (event.target.matches("button"))
+            var question = prompt("title1 + choices1");
 
-    }
+            if (question[0] !== "answer[0]" {
+                    alert("you have answered incorrectly");
+                } else {
 
-    startButton.addEventListener("click, event => {
+                    var tag = document.createElement("tagName");
 
-            * //if (question.title1 !== answer1) {
-            return "Incorrect, 10 seconds has been removed from the clock "
-            return =="correct";
+                    // Adds text content to created tag
+                    tag.textContent = "You have answered" + tagName + "correctly".
+                    ";
 
-            Else
-            if (question.title1 !== answer1) {
-                return "Incorrect, 10 seconds has been removed from the clock "
-                return =="correct";
-                Else
-                if (question.title1 !== answer1) {
-                    return "Incorrect, 10 seconds has been removed from the clock "
-                    return =="correct";
+                    // Appends tag as child of document body
+                    document.body.appendChild(tag);
+
+
+
                 }
 
-                for score(var i = 0; i < questions.length; i++) {
-                        // This statement will run each time the loop is executed
-                        return ("correct, + score);'/*'
+                function onSelectAnswer(event) {
+                    if (event.target.matches("button")) {
+
+                        var selectedButton = event.target;
+                        var selectedAnswer = selectedButton.textContent;
+                        var correctAnswer = questions[questionNumber].answer1;
+                        if (selectedAnswer === correctAnswer) {
+                            displayMessage("correct")
+                        } else {
+                            displayMessage("incorrect")
+                        }
+                    }
+
+                }
