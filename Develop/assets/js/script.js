@@ -35,41 +35,38 @@ function startGame() {
             displayMessage("you have timed out");
         }
     }, 1000);
+}
 
-    function displayQuestion() {
+function displayQuestion() {
 
-        var question = questions[questionNumber]; {
+    var question = questions[questionNumber];
 
-            var question = prompt("title1 + choices1");
+    var question = prompt("title1 + choices1");
 
-            if (question[0] !== "answer[0]" {
-                    alert("you have answered incorrectly");
-                } else {
-
-                    var tag = document.createElement("tagName");
-
-                    // Adds text content to created tag
-                    tag.textContent = "You have answered" + tagName + "correctly".
-                    ";
-
-                    // Appends tag as child of document body
-                    document.body.appendChild(tag);
+    if (question[0] !== "answer[0]") {
+        alert("you have answered incorrectly");
+    } else {
+        var tag = document.createElement("tagName");
+        // Adds text content to created tag
+        tag.textContent = "You have answered" + tagName + "correctly";
+        // Appends tag as child of document body
+        document.body.appendChild(tag);
+    }
 
 
+}
 
-                }
+function onSelectAnswer(event) {
+    if (event.target.matches("button")) {
 
-                function onSelectAnswer(event) {
-                    if (event.target.matches("button")) {
+        var selectedButton = event.target;
+        var selectedAnswer = selectedButton.textContent;
+        var correctAnswer = questions[questionNumber].answer1;
+        if (selectedAnswer === correctAnswer) {
+            displayMessage("correct")
+        } else {
+            displayMessage("incorrect")
+        }
+    }
 
-                        var selectedButton = event.target;
-                        var selectedAnswer = selectedButton.textContent;
-                        var correctAnswer = questions[questionNumber].answer1;
-                        if (selectedAnswer === correctAnswer) {
-                            displayMessage("correct")
-                        } else {
-                            displayMessage("incorrect")
-                        }
-                    }
-
-                }
+}
