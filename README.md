@@ -4,6 +4,8 @@
 
 This repository contains the code for HTML, CSS and Javascript and creates a multiple choice quiz. The application, presents the user with a series of multiple choice questions for the user to answer.
 
+![Simple Portfolio Page!](./assets/img/portfoli3HighScores.png)
+
 There are two javascript files, one containing the questions for the coding quiz and the other enabling the interactions between the HTML files and the questions.
 
 The code links HTML to javascript using the html 'id' tag to the javascript function get element by ID. The application has a timer, that uses the javascript 'set interval function' and 'if'/'else' statements, which time the user during the quiz.
